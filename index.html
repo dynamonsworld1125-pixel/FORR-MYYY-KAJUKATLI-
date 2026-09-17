@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Kajukatli 🩷</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="hearts"></div>
+<main id="app">
+
+<section class="screen active" id="password">
+  <div class="glass password-box">
+    <div class="tiny">A LITTLE SECRET FOR YOU</div>
+    <h1>OYE KAJUKATLI.. 🩷</h1>
+    <p>Aaj tumhare liye kuch banaya h but ussey pehle...</p>
+    <div class="hint">🎀 Password Hint: <b>KAJUKATLI'S BIRTHDAY</b><br><span>Password format: DD/MM</span></div>
+    <input id="pass" maxlength="5" placeholder="DD/MM" inputmode="numeric">
+    <button onclick="checkPassword()">UNLOCK THE SURPRISE ✨</button>
+    <div id="wrong"></div>
+  </div>
+</section>
+
+<section class="screen" id="entry">
+  <div class="content">
+    <div class="tiny">01 — SECRET ENTRY</div>
+    <h1>OYE KAJUKATLI… 👀</h1>
+    <p>Aaj tumhare liye kuch banaya hai…<br>par pehle ek chhota sa rule hai.</p>
+    <button onclick="go('reveal')">CHALO DEKHTI HUU 😭🎀</button>
+  </div>
+</section>
+
+<section class="screen" id="reveal">
+  <div class="content cinematic">
+    <div class="tiny">02 — WAIT FOR IT</div>
+    <h1>Ruko… ruko…</h1>
+    <p>itni jaldi bhi kya hai? 😭<br>Surprise abhi baaki hai…</p>
+    <div class="loader"><span></span></div>
+    <button onclick="go('surprise')">SURPRISE DEKHO 🤭</button>
+  </div>
+</section>
+
+<section class="screen" id="surprise">
+  <div class="content wide">
+    <div class="tiny">03 — SURPRISE!!! 🤭</div>
+    <h1>SURPRISE!!! 🤭</h1>
+    <div class="gallery">
+      <figure class="big"><div class="IMG-20260918-WA0005.jpg">PHOTO 1</div><figcaption>BIRTHDAY GIRL KA PURANA VERSION..🤭🌷</figcaption></figure>
+      <div class="pair">
+        <figure><div class="IMG-20260918-WA0001.jpg">PHOTO 2</div><figcaption>SIMPLE SI PHOTO PAR VIBE PURI 10/10!! 🧿🩷</figcaption></figure>
+        <figure><div class="IMG-20260918-WA0004.jpg">PHOTO 3</div><figcaption>KAJUKATLI SPOTTED BEING CHTIEE AGAIN! 🤭</figcaption></figure>
+        <figure><div class="IMG-20260918-WA0002.jpg">PHOTO 4</div><figcaption>YEH SMILE HUMESHA SAVE KARKE RAKHNA..😁🌷</figcaption></figure>
+        <figure><div class="IMG-20260918-WA0003.jpg">PHOTO 5</div><figcaption>ISS PHOTO ME TOH MADAM KA APNA HEE SWAG HAI..😁🧿</figcaption></figure>
+      </div>
+      <figure class="big"><div class="IMG-20260918-WA0000.jpg">PHOTO 6</div><figcaption>AUR ISME TOH EKDM CHAAND LAGRHI H CHAAND! 🧿🤭🌷</figcaption></figure>
+    </div>
+    <button onclick="go('cards')">NEXT SURPRISE 🩷</button>
+  </div>
+</section>
+
+<section class="screen" id="cards">
+  <div class="content wide">
+    <div class="tiny">04 — KAJUKATLI KE BAARE MEIN</div>
+    <h1>Kuch baatein… 🩷</h1>
+    <div class="cards">
+      <div class="card">Teri sabse dangerous ability: <b>bina kuch kiye mood theek kar dena</b> 🤭😋</div>
+      <div class="card">Teri dosti honestly <b>kaafi special</b> hai 🫶</div>
+      <div class="card">Kabhi kabhi tu mujhe naaraz krdeti hai… par wapas meri narazgi durr bhi kr deti h...😭</div>
+      <div class="card">Kabhi kabhi mai jealous bhi ho jata huu..🫠 Lekin tu meri jealousy bhi durr kr deti h🤭</div>
+    </div>
+    <button onclick="go('cake')">AUR EK CHEEZ… 🎂</button>
+  </div>
+</section>
+
+<section class="screen" id="cake">
+  <div class="content cake-screen">
+    <div class="tiny">05 — MAKE A WISH</div>
+    <div class="cake" onclick="celebrate()"><div class="flame">✦</div><div class="candles">🕯️ 🕯️ 🕯️</div><div class="cakebody">🎂</div></div>
+    <h1>Chal pgli , candles bujha aur wish maang ✨</h1>
+    <p id="wish">Tap the cake 🎀</p>
+    <button onclick="go('letter')">SHORT MESSAGE 👉🏻👈🏻</button>
+  </div>
+</section>
+
+<section class="screen" id="letter">
+  <div class="content">
+    <div class="tiny">06 — A LITTLE LETTER 💌</div>
+    <button id="openLetter" onclick="typeLetter()">LETTER KHOLO</button>
+    <div class="letter" id="letterBox"><span id="typed"></span><span class="cursor">|</span></div>
+    <button id="lastBtn" class="hidden" onclick="go('final')">LAST SURPRISE</button>
+  </div>
+</section>
+
+<section class="screen" id="final">
+  <div class="final">
+    <div class="sparkles">✦ ✧ ✦ ✧ ✦</div>
+    <h1>HAPPIESTTT BIRTHDAYYY<br><span>KAJUKATLI 🩷</span></h1>
+    <div class="final-hearts">♡ ✦ ♡ ✧ ♡</div>
+    <p>Bas aise hi hamesha haste rehna,<br>Bakchodi karti rehna,<br>aur haan… mujhe bhoolna mat. 🤭🫶</p>
+  </div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+  </html>
